@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Orbitron', sans-serif;
+    background-color: rgb(17, 17, 21);
+}
+
+.nexus-calculator {
+    background-color: rgb(31, 33, 46);
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.877);
+    border: 1px solid rgba(0, 255, 255, 0.2);
+}
+
+.calculator-layar {
+    background-color: rgba(13, 22, 45, 0.7);
+    backdrop-filter: blur(5px);
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid rgba(0, 255, 255, 0.3);
+    text-align: right;
+    overflow: hidden;
+}
+
+.perhitungan-sebelumnya {
+    color: rgba(240, 240, 240, 0.6);
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.input-sekarang {
+    color: rgba(240, 240, 240);
+    font-size: 2.5rem;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.calculator-tombol {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.baris-tombol {
+    display: flex;
+    gap: 10px;
+}
+
+.btn {
+    border: none;
+    width: 65px;
+    height: 65px;
+    border-radius: 50px;
+    font-size: 1.5rem;
+    color: rgb(240,240,240);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.btn-angka {
+    background-color: rgb(48, 50, 68);
+}
+
+.btn-fungsi {
+    background-color: rgb(76, 79, 107);
+}
+
+.btn-operator {
+    background-color: rgb(0, 255, 255);
+    color: rgb(31, 33, 46);
+}
+
+.btn-lebar {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.btn:hover {
+    filter: brightness(1.2);
+}
+
+.btn:active {
+    transform: translateY(2px);
+}
+
+/* ========================================= */
+/* ===== BAGIAN RESPONSIVE UNTUK PONSEL ==== */
+/* ========================================= */
+
+@media (max-width: 480px) {
+
+  /* Beri sedikit padding pada body agar ada ruang untuk shadow */
+  body {
+    padding: 10px;
+  }
+
+  /* Kalkulator memenuhi lebar dengan bayangan tetap menyala */
+  .nexus-calculator {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.877); /* Intensitas shadow kembali seperti desktop */
+  }
+
+  .calculator-layar {
+    padding: 15px;
+    margin-bottom: 15px;
+  }
+
+  .perhitungan-sebelumnya {
+    font-size: 1.5rem;
+  }
+
+  .input-sekarang {
+    font-size: 2rem;
+  }
+
+  .calculator-tombol {
+    gap: 8px;
+  }
+
+  .baris-tombol {
+    gap: 8px;
+  }
+
+  .btn {
+    width: auto;
+    height: auto;
+    flex: 1;
+    aspect-ratio: 1 / 1;
+    font-size: 1.2rem;
+    border-radius: 100px;
+  }
+
+  .btn-lebar {
+    flex-grow: 2.15;
+    aspect-ratio: auto;
+  }
+}
+
+
+
